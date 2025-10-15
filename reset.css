@@ -1,0 +1,106 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	color-scheme: light-dark;
+	font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+	line-height: 1.5;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	font-feature-settings: "kern";
+	font-kerning: normal;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	line-height: 1.1;
+	text-wrap: balance;
+}
+
+p, li {
+	text-wrap: pretty;
+}
+
+img, svg, video, iframe, canvas {
+	display: block;
+	max-inline-size: 100%;
+	block-size: auto;
+	border-style: none;
+}
+
+svg {
+	fill: currentColor;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+    inset-block-end: -0.25em;
+  }
+
+sup {
+	inset-block-start: -0.5em;
+}
+
+.sr-only:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+input, select, textarea, button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+input:is([type="checkbox"], [type="radio"]), select, label, button {
+	cursor: pointer;
+	line-height: 1;
+}
+
+fieldset {
+	border:  0;
+	margin:  0;
+	padding:  0;
+}
+
+[aria-disabled="true"], [disabled] {
+	cursor: not-allowed;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+*:focus-visible {
+	outline: 2px solid crimson;
+	outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: smooth;
+		interpolate-size: allow-keywords;
+	}
+}
